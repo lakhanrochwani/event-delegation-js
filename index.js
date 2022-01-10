@@ -1,6 +1,10 @@
-// Import stylesheets
-import './style.css';
-
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
+document.getElementById('parent-list').addEventListener('click', function (e) {
+  console.log(e.target);
+  if (e.target && e.target.nodeName == 'LI') {
+    console.log(
+      'List item ',
+      e.target.id.replace('post-', ''),
+      ' was clicked!'
+    );
+  }
+});
